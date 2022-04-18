@@ -6,10 +6,10 @@ import "./infoCard.scss";
 const InfoCard = () => (
   <Container className="my-5 card">
     <Row>
-      <Col xs={12} lg={7} className="mb-5 mb-lg-0 px-5 px-lg-0">
-        <Col xs={12} lg={5}>
+      <Col xs={12} lg={7} className="mb-5 px-5">
+        <Col xs={12}>
           <Row>
-            <h2 className="display-4 my-5">Cartão de Crédito</h2>
+            <h2 className="my-5">Cartão de Crédito</h2>
           </Row>
           <Row>
             <Col xs={12} lg={6} className="mb-4">
@@ -56,7 +56,7 @@ const InfoCard = () => (
         </Col>
       </Col>
 
-      <Col xs={12} lg={5}>
+      <Col xs={12} lg={5} className="mb-5 px-5 justify-content-center">
         <Image src={card} alt="MagBank Credit Card Example" fluid />
       </Col>
     </Row>

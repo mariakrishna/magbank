@@ -2,8 +2,9 @@ import React from "react";
 import Navbar from "./components/navbar";
 import Hero from "./components/hero";
 import InfoCard from "./components/infoCard";
-import CardList from "./components/CardList";
+import CardList from "./components/cardList";
 import CenteredButton from "./components/centeredButton";
+import Institutional from "./components/institutional";
 import "./app.scss";
 
 import post from "./data/posts";
@@ -14,8 +15,10 @@ const App = () => (
     <Hero />
 
     <InfoCard />
-    <CardList />
+    <CardList post={post} />
     <CenteredButton>Abra sua Conta!</CenteredButton>
+
+    <Institutional />
   </div>
 );
 

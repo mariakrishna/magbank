@@ -1,7 +1,16 @@
+@import '../variables';
+
 .card i {
-    color: #f05656;
+    color: $color-secondary;
 }
 
 h2 {
-    color: #8c00b2;
+    color: $color-primary;
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    
+    @media screen and (min-width: 992px) {
+        font-size: 5.5rem;
+    }
 }

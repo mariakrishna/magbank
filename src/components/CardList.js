@@ -1,7 +1,8 @@
 import React from "react";
 import { Row, Col, Button, Container, Card } from "react-bootstrap";
+import "./cardList.scss";
 
-const CardList = ({ post }) => {
+const CardList = ({ post }) => (
   <Container>
     <Row>
       {post &&
@@ -18,7 +19,7 @@ const CardList = ({ post }) => {
           </Col>
         ))}
     </Row>
-  </Container>;
-};
+  </Container>
+);
 
 export default CardList;
