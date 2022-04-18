@@ -20,19 +20,19 @@ const Institutional = () => (
             nisl.
           </p>
           <section className="mb-3 pb-4">
-            <Col>
+            <Col className="mb-3">
               <i class="fa-solid fa-mobile-screen 2x"></i>
               &nbsp;&nbsp;Sem fila e sem burocracira
             </Col>
-            <Col>
+            <Col className="mb-3">
               <i class="fa-solid fa-mobile 2x"></i>
               &nbsp;&nbsp;Simples e prático
             </Col>
-            <Col>
+            <Col className="mb-3">
               <i class="fa-solid fa-globe 2x"></i>
               &nbsp;&nbsp;Abertura de conta 100% online
             </Col>
-            <Col>
+            <Col className="mb-3">
               <i class="fa-solid fa-shield-halved 2x"></i>
               &nbsp;&nbsp;Transações mais seguras
             </Col>
