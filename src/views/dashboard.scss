@@ -1,31 +1,35 @@
 @import "../variables.scss";
 
 .dashboard {
-    
+  @media screen and (min-width: 992px) {
+    min-height: 70vh;
+  }
+  &__useravatar {
+    position: relative;
+  }
+  &__usericon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -110%);
+  }
+  &__button {
+    color: $color-primary;
+    text-decoration: none;
+    text-align: left;
 
-
-    &__useravatar {
-        position: relative;
+    &:hover,
+    &--active {
+      background-color: $color-primary;
+      color: #fff;
+      text-decoration: none;
+      text-align: left;
     }
-    &__usericon {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -110%);
-        }
-    &__button {
-
-        color: $color-primary;
-        text-decoration: none;
-        text-align: left;
-
-        &:hover,
-        &--active {
-            background-color: $color-primary;
-            color: #fff;
-            text-decoration: none;
-            text-align: left;
-            
-        }
-    }
+  }
+  a.nav-item.nav-link {
+    color: $color-primary;
+  }
+  a.nav-item.nav-link:active {
+    color: #626262;
+  }
 }
