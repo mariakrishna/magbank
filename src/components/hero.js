@@ -4,7 +4,7 @@ import logo from "../assets/logo__magic-pay--mobile.png";
 import logoDesktop from "../assets/logo__magic-pay.png";
 import "./hero.scss";
 
-const Hero = () => (
+const Hero = ({ onClick }) => (
   <div className="jumbotron text-light hero">
     <div className="text-center">
       <Row className="my-lg-5">
@@ -14,7 +14,9 @@ const Hero = () => (
         </Col>
         <Col lg className4="text-lg-left my-lg-5">
           <p>Pague suas contas pelo nosso app!</p>
-          <Button variant="outline-light">Abra sua conta</Button>
+          <Button variant="outline-light" onClick={onClick}>
+            Abra sua conta
+          </Button>
         </Col>
       </Row>
     </div>

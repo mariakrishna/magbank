@@ -1,8 +1,15 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import {
+  faMobileAlt,
+  faMobile,
+  faGlobe,
+  faShieldAlt,
+} from "@fortawesome/free-solid-svg-icons";
+import IconText from "./IconText";
 import "./institutional.scss";
 
-const Institutional = () => (
+const Institutional = ({ onClick }) => (
   <div className="institutional text-light py-5">
     <Container className="ps-5">
       <Row>
@@ -10,7 +17,7 @@ const Institutional = () => (
         <Col xs={12} lg={7}>
           <h3>Já Nascemos digital</h3>
 
-          <p>
+          <p className="mb-5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
             luctus, lectus in dignissim bibendum, neque nisi suscipit erat, id
             tristique sem libero at sem. In imperdiet mi a viverra condimentum.
@@ -19,26 +26,24 @@ const Institutional = () => (
             est eu accumsan. Duis commodo molestie vestibulum. Sed non luctus
             nisl.
           </p>
-          <section className="mb-3 pb-4">
-            <Col className="mb-3">
-              <i class="fa-solid fa-mobile-screen 2x"></i>
-              &nbsp;&nbsp;Sem fila e sem burocracira
-            </Col>
-            <Col className="mb-3">
-              <i class="fa-solid fa-mobile 2x"></i>
-              &nbsp;&nbsp;Simples e prático
-            </Col>
-            <Col className="mb-3">
-              <i class="fa-solid fa-globe 2x"></i>
-              &nbsp;&nbsp;Abertura de conta 100% online
-            </Col>
-            <Col className="mb-3">
-              <i class="fa-solid fa-shield-halved 2x"></i>
-              &nbsp;&nbsp;Transações mais seguras
-            </Col>
-          </section>
+          <div className="mb-3 pb-4">
+            <IconText icon={faMobileAlt} color="#fff" className="mb-2">
+              Sem fila e sem burocracira
+            </IconText>
+            <IconText icon={faMobile} color="#fff" className="mb-2">
+              Simples e Prático
+            </IconText>
+            <IconText icon={faGlobe} color="#fff" className="mb-2">
+              Abertura de Conta 100% Online
+            </IconText>
+            <IconText icon={faShieldAlt} color="#fff" className="mb-2">
+              Transações Mais Seguras
+            </IconText>
+          </div>
 
-          <Button variant="outline-light">Abra sua Conta!</Button>
+          <Button variant="outline-light" onClick={onClick}>
+            Abra sua Conta!
+          </Button>
         </Col>
       </Row>
     </Container>
