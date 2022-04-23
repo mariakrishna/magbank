@@ -1,0 +1,31 @@
+@import "../variables.scss";
+
+.dashboard {
+    
+
+
+    &__useravatar {
+        position: relative;
+    }
+    &__usericon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -110%);
+        }
+    &__button {
+
+        color: $color-primary;
+        text-decoration: none;
+        text-align: left;
+
+        &:hover,
+        &--active {
+            background-color: $color-primary;
+            color: #fff;
+            text-decoration: none;
+            text-align: left;
+            
+        }
+    }
+}
