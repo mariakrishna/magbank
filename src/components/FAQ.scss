@@ -1,0 +1,29 @@
+@import '../variables';
+
+.faq {
+    background-color: $color-faq-background;
+    color: #fff;
+}
+
+.faq__title {
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 1.2;
+        text-align: center;
+    
+        @media screen and (min-width: 992px) {
+            font-size: 3rem;
+        }
+    }
+
+div.faq__card {
+    background-color: unset;
+    .accordion-button {
+        background-color: $color-faq-header;
+        color: #fff;
+    }
+}
+
+.faq-clickable {
+    cursor: pointer;
+}

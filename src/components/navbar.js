@@ -10,7 +10,7 @@ import {
 import "./navbar.scss";
 import logo from "../assets/logo.svg";
 
-const Navigation = () => (
+const Navigation = ({ handleCreateAcc }) => (
   <Navbar expand="lg" variant="dark">
     <Container>
       <Navbar.Brand href="#home">
@@ -40,7 +40,9 @@ const Navigation = () => (
               <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>
             </NavDropdown>
           </Button>
-          <Button variant="outline-light">Criar minha conta</Button>
+          <Button variant="outline-light" onClick={handleCreateAcc}>
+            Criar minha conta
+          </Button>
         </ButtonGroup>
       </Navbar.Collapse>
     </Container>
