@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Navbar,
   Nav,
@@ -14,12 +15,14 @@ const Navigation = ({ handleCreateAcc }) => (
   <Navbar expand="lg" variant="dark">
     <Container>
       <Navbar.Brand href="#home">
-        <img
-          src={logo}
-          height="30"
-          className="d-inline-block align-top"
-          alt="MagBank logo"
-        />
+        <Link to="/">
+          <img
+            src={logo}
+            height="30"
+            className="d-inline-block align-top"
+            alt="MagBank logo"
+          />
+        </Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
@@ -31,10 +34,11 @@ const Navigation = ({ handleCreateAcc }) => (
         <ButtonGroup aria-label="Basic example">
           <Button variant="outline-light">
             <NavDropdown title="Acessar minha conta" id="nav-dropdown">
-              <NavDropdown.Item eventKey="4.1">Action</NavDropdown.Item>
-              <NavDropdown.Item eventKey="4.2">Another action</NavDropdown.Item>
-              <NavDropdown.Item eventKey="4.3">
-                Something else here
+              <NavDropdown.Item eventKey="4.1">
+                <Link to="/login">Pessoa Física</Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item eventKey="4.2">
+                Pessoa Jurídica
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>

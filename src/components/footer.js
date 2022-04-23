@@ -14,12 +14,13 @@ import "./footer.scss";
 const Footer = () => (
   <footer className="footer">
     <Container>
-      <Row className="text-center py-5">
+      <Row className="text-center py-3 mb-5 mb-lg-0">
         <Col xs={12} lg={6} className="text-lg-left">
-          <Image src={logo} />
+          <Image src={logo} className="mb-5 mb-lg-0" />
         </Col>
         <Col xs={12} lg={4} className="py-xs-5">
-          <Image src={applestore} /> <Image src={googleplay} className="ml-2" />
+          <Image src={applestore} />{" "}
+          <Image src={googleplay} className="ml-2 " />
         </Col>
         <Col
           Col
