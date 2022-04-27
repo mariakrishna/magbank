@@ -17,6 +17,7 @@
     color: $color-primary;
     text-decoration: none;
     text-align: left;
+    width: 100%;
 
     &:hover,
     &--active {
@@ -25,11 +26,19 @@
       text-decoration: none;
       text-align: left;
     }
+    &:hover {
+      background-color: $color-muted;
+    }
+    a,
+    a:active,
+    a:hover {
+      text-decoration: none;
+    }
   }
   a.nav-item.nav-link {
     color: $color-primary;
   }
   a.nav-item.nav-link:active {
-    color: #626262;
+    color: $color-muted;
   }
 }

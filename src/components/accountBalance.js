@@ -2,7 +2,8 @@ import React from "react";
 import { Button, Col, Tabs, Tab, Table } from "react-bootstrap";
 
 const AccountBalance = ({ data }) => {
-  const { lastestData, futureData } = data;
+  const { latestData, futureData } = data;
+
   return (
     <>
       <Col xs={12} lg={3} className="mt-lg-5 pt-lg-4">
@@ -36,7 +37,7 @@ const AccountBalance = ({ data }) => {
                 </tr>
               </thead>
               <tbody>
-                {lastestData.map(({ date, description, value }) => (
+                {latestData.map(({ date, description, value }) => (
                   <tr>
                     <td>{date}</td>
                     <td>{description}</td>

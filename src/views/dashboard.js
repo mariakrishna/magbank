@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle, faUser } from "@fortawesome/free-solid-svg-icons";
 import "./dashboard.scss";
-import AccountBalance from "../components/accountBalance";
 
-const Dashboard = ({ className }) => {
+import AccountBalance from "../components/accountBalance";
+import AccountPayments from "../components/accountPayments";
+import AccoutHistory from "../components/accountHistory";
+
+import { Link, Route, Routes } from "react-router-dom";
+
+const Dashboard = ({ className = false }) => {
+  const [activeLink, setActiveLink] = useState(0);
+
+  const links = [
+    { text: "Minha Conta", path: "/dashboard", exact: true },
+    { text: "Pagamentos", path: "/dashboard/payments" },
+    { text: "Extrato", path: "/dashboard/history" },
+  ];
+
   const data = {
-    latesteData: [
+    latestData: [
       { date: "22/07", description: "SAQUE 24h 012345", value: "300,00" },
       { date: "21/07", description: "SUPERMERCADO 12657", value: "275,90" },
       { date: "20/07", description: "NETFLIX 85452", value: "30,00" },
@@ -19,6 +32,8 @@ const Dashboard = ({ className }) => {
       { date: "21/08", description: "NETFLIX 12657", value: "275,90" },
       { date: "15/08", description: "AULA DE CANTO 52147", value: "350,00" },
     ],
+
+    history: ["histórico 1", "histórico 2"],
   };
 
   return (
@@ -41,34 +56,28 @@ const Dashboard = ({ className }) => {
               <h4>Nome do Usuário</h4>
               <p className="text-muted">ag: 1234 c/c: 4321-5</p>
             </Col>
-
-            <Button
-              className="dashboard__button text-left"
-              variant="link"
-              size="lg"
-              block
-            >
-              Minha Conta
-            </Button>
-            <Button
-              className="dashboard__button"
-              variant="link"
-              size="lg"
-              block
-            >
-              Pagamentos
-            </Button>
-            <Button
-              className="dashboard__button"
-              variant="link"
-              size="lg"
-              block
-            >
-              Extrato
-            </Button>
+            {links.map(({ text, path, exact }, key = { key }) => (
+              <Link to={path} exact={exact ? exact : false}>
+                <Button
+                  className={`dashboard__button text-left ${
+                    key === activeLink ? "dashboard__button--active" : ""
+                  }`}
+                  variant="link"
+                  size="lg"
+                  block
+                  onClick={() => setActiveLink(key)}
+                >
+                  {text}
+                </Button>
+              </Link>
+            ))}
           </Row>
         </Col>
-        <AccountBalance data={data} />
+        <Routes>
+          <Route path="" element={<AccountBalance data={data} />} />
+          <Route path="" element={<AccountPayments data={data} />} />
+          <Route path="" element={<AccoutHistory data={data} />} />
+        </Routes>
       </Row>
     </Container>
   );
