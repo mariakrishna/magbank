@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Col, Tabs, Tab, Table } from "react-bootstrap";
+import "./accountBalance.scss";
 
 const AccountBalance = ({ data }) => {
   const { latestData, futureData } = data;
@@ -47,7 +48,7 @@ const AccountBalance = ({ data }) => {
               </tbody>
             </Table>
           </Tab>
-          <Tab eventKey="future" title="Lançamentos Futuros">
+          <Tab eventKey="future" className="color" title="Lançamentos Futuros">
             <Table striped borderless>
               <thead>
                 <tr>

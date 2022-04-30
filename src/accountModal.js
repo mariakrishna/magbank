@@ -38,7 +38,7 @@ const AccountModal = ({ show, handleClose }) => (
       <Button variant="secondary" onClick={handleClose}>
         Cancelar
       </Button>
-      <Button variant="primary" className="button_color" onClick={handleClose}>
+      <Button className="button_color" onClick={handleClose}>
         Criar Conta
       </Button>
     </Modal.Footer>

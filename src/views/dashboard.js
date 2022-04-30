@@ -33,7 +33,20 @@ const Dashboard = ({ className = false }) => {
       { date: "15/08", description: "AULA DE CANTO 52147", value: "350,00" },
     ],
 
-    history: ["histórico 1", "histórico 2"],
+    history: [
+      { date: "17/07", description: "SAQUE 24h 012345", value: "-300,00" },
+      { date: "17/07", description: "SALDO DO DIA", saldo: "2.780,00" },
+      { date: "19/07", description: "ESTACIONAMENTO 12657", value: "-12,90" },
+      { date: "19/07", description: "COMPRA INTERNET 12657", value: "-450,90" },
+      { date: "19/07", description: "SALDO DO DIA", saldo: "2.318,00" },
+      { date: "21/07", description: "SUPERMERCADO 85452", value: "-275,00" },
+      { date: "21/07", description: "ESTACIONAMENTO 85452", value: "-12,00" },
+      { date: "21/07", description: "SHOPPING 85452", value: "-180,00" },
+      { date: "21/07", description: "SALDO DO DIA", saldo: "1851,00" },
+      { date: "22/07", description: "SUPERMERCADO 52147", value: "-275,00" },
+      { date: "22/07", description: "DEPÓSITO 52147", value: "1.000,00" },
+      { date: "22/07", description: "SALDO DO DIA", saldo: "2.576,00" },
+    ],
   };
 
   return (
@@ -75,8 +88,8 @@ const Dashboard = ({ className = false }) => {
         </Col>
         <Routes>
           <Route path="" element={<AccountBalance data={data} />} />
-          <Route path="" element={<AccountPayments data={data} />} />
-          <Route path="" element={<AccoutHistory data={data} />} />
+          <Route path="payments" element={<AccountPayments data={data} />} />
+          <Route path="history" element={<AccoutHistory data={data} />} />
         </Routes>
       </Row>
     </Container>
