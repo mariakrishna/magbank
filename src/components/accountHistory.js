@@ -5,7 +5,8 @@ const AccountHistory = ({ data }) => {
   const { history } = data;
 
   return (
-    <Col xs={12} lg={8}>
+    <Col xs={12} lg={8} className="mt-lg-5">
+      <h3 className="mt-4 mb-3">Extrato de Conta Corrente</h3>
       <Table striped borderless>
         <thead>
           <tr>

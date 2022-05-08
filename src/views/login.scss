@@ -1,18 +1,18 @@
-@import '../variables';
+@import "../variables";
 
 .login {
-    max-width: 100vw;
-    height: calc(100vh - 22rem);
+  max-width: 100vw;
+  height: calc(100vh - 22rem);
 
-    @media screen and (min-width:992px) {
-        height: calc(100vh - 16.25rem);
-    }
-    display: grid;
-    place-items: center;
+  @media screen and (min-width: 992px) {
+    height: calc(100vh - 8rem);
+  }
+  display: grid;
+  place-items: center;
 
-    background-image: linear-gradient(135deg, $color-primary, $color-secondary);
+  background-image: linear-gradient(135deg, $color-primary, $color-secondary);
 
-    &__container {
-        max-width: 22rem;
-    }
+  &__container {
+    max-width: 22rem;
+  }
 }

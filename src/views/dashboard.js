@@ -10,7 +10,7 @@ import AccoutHistory from "../components/accountHistory";
 
 import { Link, Route, Routes } from "react-router-dom";
 
-const Dashboard = ({ className = false }) => {
+const Dashboard = ({ className = false, name, account }) => {
   const [activeLink, setActiveLink] = useState(0);
 
   const links = [
@@ -66,8 +66,8 @@ const Dashboard = ({ className = false }) => {
               </span>
             </Col>
             <Col xs={9}>
-              <h4>Nome do Usuário</h4>
-              <p className="text-muted">ag: 1234 c/c: 4321-5</p>
+              <h4>{name}</h4>
+              <p className="text-muted">{account}</p>
             </Col>
             {links.map(({ text, path, exact }, key = { key }) => (
               <Link to={path} exact={exact ? exact : false}>
