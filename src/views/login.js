@@ -55,7 +55,7 @@ const Login = ({ auth }) => {
                 type="criar conta"
                 onClick={handleSubmit}
               >
-                Criar Conta
+                Entrar
               </Button>
             </Form>
           </Col>
